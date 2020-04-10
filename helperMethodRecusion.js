@@ -1,9 +1,10 @@
-//Helper method recursion has two functions one in and one out
+//Helper method recursion has two functions one in and one out. In other words is a pattern.
+// Helper method is not a pure recursion because it uses external data structure and nested functions
 
 function collectOddVal(arr) {
-    let result = [];
+    let result = []; // external data structure
     
-    function helper(helperInput) {
+    function helper(helperInput) { // nested function
         if (helperInput.length === 0) {
             return; // If equals 0 then stop 
         }

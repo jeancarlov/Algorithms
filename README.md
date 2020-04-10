@@ -14,7 +14,7 @@
 
 # Common recursion pitfalls
 
-## no having a base case or case base is wrong 
+## No having a base case or case base is wrong 
 ## Forgeting to return  or returning the wrong thing 
 
 ### If the return 1 is taking off then the function will go never ending the return is the break
@@ -23,3 +23,12 @@
 
 ## Helper method recursion has two functions one in and one out 
 
+## Pure Recursion
+
+# Pure recusion meand that the function itself is self containing, there is not external data structure and nested functions. Pure recursion is a bit more challenging than helper method but is more efficient
+
+### Tip for Pure Recursion 
+
+# For arrays, use methods like slice, the spread operator, and concat that make copies of array so you do not mutate them
+# Remember that strings are immutable so you will need to use methods like slice, subsstr, or substring to make copies of strings
+# To make copies of objects use Object.assign, or the spread operator
