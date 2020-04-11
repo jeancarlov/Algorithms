@@ -1,5 +1,7 @@
 ##How recursive functions work 
 
+![IMG_0049](https://user-images.githubusercontent.com/39811614/79053129-eada9e80-7c08-11ea-9130-52c00a53706b.jpg)
+
 # Invoke the same function with a different input until you reach your base 
 ###  Base Case is where the recursion ends !important!
 
