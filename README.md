@@ -38,7 +38,15 @@
 # This methods search each element at a time 
 
 
-### Big O Linear Search
+### Big O Linear Search  LINEAR IS GREAT FOR UNSORTED ARRAY
 ## Best is O(1)
 ## Average O(n)
 ##  Worst O(n)  as n growth so is the time 
+
+### Binary Search is great but it only works in sorted arrays (in order)
+# 	• Rather than eliminating one element at a time, You can eliminate half of the remaining elements at time.	
+# Tip for binary  => Divide and Conquer 
+
+## TIME COMPLEXITY WITH BINARY SEARCH
+# Worst and Average O(log n) 
+# Best Case (1)
