@@ -32,3 +32,13 @@
 # For arrays, use methods like slice, the spread operator, and concat that make copies of array so you do not mutate them
 # Remember that strings are immutable so you will need to use methods like slice, subsstr, or substring to make copies of strings
 # To make copies of objects use Object.assign, or the spread operator
+
+### Searching Algorithms
+# Index search methods on arrays  indexOf , includes, find 
+# This methods search each element at a time 
+
+
+### Big O Linear Search
+## Best is O(1)
+## Average O(n)
+##  Worst O(n)  as n growth so is the time 
