@@ -12,3 +12,8 @@
 
 ## Insertion Sort 
 # Builds up the sort by gradually creating a larger left sorted portion 
+
+
+## Time and space comparison  of bubble , insertion, and selection 
+
+### Insertion Sort is ideal when you need continues data to be sorted in order and keep things up to date.

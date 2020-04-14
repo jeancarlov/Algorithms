@@ -35,6 +35,7 @@
 # Remember that strings are immutable so you will need to use methods like slice, subsstr, or substring to make copies of strings
 # To make copies of objects use Object.assign, or the spread operator
 
+
 ### Searching Algorithms
 # Index search methods on arrays  indexOf , includes, find 
 # This methods search each element at a time 
@@ -53,3 +54,13 @@
 # Worst and Average O(log n) 
 # Best Case (1)
 
+### Elementary Sort Algorithms: Bubble, Insertion , Selection
+
+# Bubble sort:  placing large values first into sorted position at the end. bubble sort is quadratic so in large data it will take longer (time complexity)
+# Selection sort:  places small value first into sorted position at the start.
+# Insertion sort: Builds up the sort by gradually creating a larger left sorted portion  --- ideal for new data to be place in continues order positions.
+
+## Shortcommings: Elementary algorithms do not scale well in a large scale 
+
+### Intermedate Sort Algorithms : Merge , Quick , Radix Sort  
+## Why this algorithms?  faster sorting algorithms that can improve time complexity from  O(n^2)  to  O(n log n)
