@@ -1,4 +1,6 @@
 
+// NOTE: This merge sort 01 only works with two sorted arrays
+
 // Write a functions to merge to sorted arrays 
 // assume arrays are sorted and return the combination of the arrays
 
@@ -38,6 +40,10 @@ function merge(arr1, arr2) {
 let total =merge([1,10,50],[2,14,99,100]);
 
 console.log(total); // [ 1, 2, 10, 14, 50, 99, 100 ]
+
+// NOTE: This merge sort only works with two sorted arrays
+
+
 
 
 
