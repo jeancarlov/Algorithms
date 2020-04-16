@@ -1,6 +1,5 @@
 
-// NOTE: This merge sort 01 only works with two sorted arrays
-
+// NOTE: This merge function only works with two sorted arrays before addin mergeSort function for full funcionality
 // Write a functions to merge to sorted arrays 
 // assume arrays are sorted and return the combination of the arrays
 
@@ -41,9 +40,11 @@ let total =merge([1,10,50],[2,14,99,100]);
 
 console.log(total); // [ 1, 2, 10, 14, 50, 99, 100 ]
 
-// NOTE: This merge sort only works with two sorted arrays
+// NOTE: This merge function only works with two sorted arrays before addin mergeSort function for full funcionality
 
-
+// MergeSort  O(n log n)  this actually the best we could get from a sorting algorith unless is help like in quick sort
+// Mersor is good with time complexity => O(n log n)  
+// Merge Sort does has a bit of disadvantage in the space complexity incontrast to bubble sort 
 
 
 

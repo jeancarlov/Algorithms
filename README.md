@@ -64,3 +64,11 @@
 
 ### Intermedate Sort Algorithms : Merge , Quick , Radix Sort  
 ## Why this algorithms?  faster sorting algorithms that can improve time complexity from  O(n^2)  to  O(n log n)
+
+## Merge
+#  MergeSort  O(n log n)  this actually the best we could get from a sorting algorith unless is help like in quick sort
+# Mersor is good with time complexity => O(n log n) 
+
+## Quick Sort 
+# It works in the same assumption as mergeSort. We slpit the data until is individually sort. However, Works by selecting one element (pivot) ex: 5  and finding the index where the pivot should end up in the sorted array, and then we repeated the process of pivoting an element for the left and right side
+
