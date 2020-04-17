@@ -1,6 +1,7 @@
+![IMG_0053](https://user-images.githubusercontent.com/39811614/79526778-07753d00-8034-11ea-8b2d-d06f01bec8a4.jpg)
 ## How recursive functions work 
 
-![IMG_0049](https://user-images.githubusercontent.com/39811614/79053129-eada9e80-7c08-11ea-9130-52c00a53706b.jpg)
+![IMG_0049 2](https://user-images.githubusercontent.com/39811614/79524241-0214f400-802e-11ea-8020-de8282797246.jpg)
 
 # Invoke the same function with a different input until you reach your base 
 ###  Base Case is where the recursion ends !important!
@@ -72,5 +73,15 @@
 ## Quick Sort 
 # It works in the same assumption as mergeSort. We slpit the data until is individually sort. However, Works by selecting one element (pivot) ex: 5  and finding the index where the pivot should end up in the sorted array, and then we repeated the process of pivoting an element for the left and right side
 # Avoid picking the first Element in array [0] as the pivot instead  try the median or random number
-# Quick sort has a major array that is decomposed into subarras in right and left, then return newArr in recursion to an order sort array as the final output. 
+# Quick sort has a major array that is decomposed into subarrays in right and left, then return newArr in recursion to an order sort array as the final output. 
 ![IMG_0052](https://user-images.githubusercontent.com/39811614/79518164-5fa14480-801e-11ea-9ccd-60e64c78ea11.jpg)
+
+## Comparison Sort group: 
+# (bubble, insertion, selection) -lacks on time complexity O(n^2)  in a large scale good for small arrays
+# (Merge, Quick) - It inprobes time complexity to O(n log n) 
+
+### Can we do beter? is there faster Algorithms? Yes, but not by making comparisons, best case secnerio is getting  O(n log n) 
+
+## Radix sort (Works on numbers usually binary)
+# It exploits the fact that information about the size of a number is encoded in the number of digits. More digits means a bigger number.
+![radix](https://user-images.githubusercontent.com/39811614/79520164-03d9ba00-8024-11ea-883b-b237f2a0988a.png)
