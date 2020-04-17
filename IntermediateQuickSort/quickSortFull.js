@@ -18,10 +18,10 @@ function pivot(arr, start = 0, end = arr.length + 1) {
     //     [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]; 
     // };
     // Assumption => pivot is the first element  arr[start] for simplicity but it affect Big O 
-    let pivot = arr[start]; //index 0 
+    let pivot = arr[start]; //index 0   arr = (7) [4, 6, 9, 1, 2, 5, 3], left = 0, right = 6
     let swapIndex = start;  // swap index 
 
-    for (let i = start +1; i <= end; i++) {
+    for (let i = start + 1; i <= end; i++) {  // left = 0, right = 6   
         if (pivot > arr[i]) {
             swapIndex++;
             swap(arr, swapIndex, i);
@@ -36,9 +36,9 @@ function pivot(arr, start = 0, end = arr.length + 1) {
 // let result = pivotHelper([4, 8, 2, 1, 5, 7, 6, 3]);
 
 
- function quickSort(arr, left = 0, right = arr.length -1) {
+function quickSort(arr, left = 0, right = arr.length - 1) { // arr = (7) [4, 6, 9, 1, 2, 5, 3], left = 0, right = 6
      if (left < right) {
-         let pivotIndex = pivot(arr, left, right) // it returns 3
+         let pivotIndex = pivot(arr, left, right) // it returns 3  note: pivot function is invoked
          // Left side
          quickSort(arr, left, pivotIndex-1)
          // Right side

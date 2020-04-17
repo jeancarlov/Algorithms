@@ -71,4 +71,6 @@
 
 ## Quick Sort 
 # It works in the same assumption as mergeSort. We slpit the data until is individually sort. However, Works by selecting one element (pivot) ex: 5  and finding the index where the pivot should end up in the sorted array, and then we repeated the process of pivoting an element for the left and right side
-
+# Avoid picking the first Element in array [0] as the pivot instead  try the median or random number
+# Quick sort has a major array that is decomposed into subarras in right and left, then return newArr in recursion to an order sort array as the final output. 
+![IMG_0052](https://user-images.githubusercontent.com/39811614/79518164-5fa14480-801e-11ea-9ccd-60e64c78ea11.jpg)
