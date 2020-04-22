@@ -85,3 +85,6 @@
 ## Radix sort (Works on numbers usually binary)
 # It exploits the fact that information about the size of a number is encoded in the number of digits. More digits means a bigger number.
 ![radix](https://user-images.githubusercontent.com/39811614/79520164-03d9ba00-8024-11ea-883b-b237f2a0988a.png)
+
+
+# <Credits>  This is my review and notes in algorithms that I learn from taking JavaScript Algorithms and Data structure course from instructor Colt Steel.  The main purpose of this review is to help me learn, understand, implement, and review Algortims and Data Structure. This is not meant to be used for commercial purposes. 

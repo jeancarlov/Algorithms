@@ -29,13 +29,16 @@ function mostDigits(nums) {
 // Radix function 
 function radixSort(nums) {
     let maxDigitCount = mostDigits(nums);
+    console.log(maxDigitCount);
     for (let k = 0; k < maxDigitCount; k++) {
-        let digitBuckets = Array.from({ length: 10 }, () => []);
+        let digitBuckets = Array.from({ length: 10 }, () => []);  // length of 10 empty sub arrays 
         for (let i = 0; i < nums.length; i++) {
             let digit = getDigit(nums[i], k);
             digitBuckets[digit].push(nums[i]);
         }
+        console.log(digitBuckets); // start from index 0 from the right 
         nums = [].concat(...digitBuckets);
+        console.log(nums);  // put elements in order digit 
     }
     return nums;
 }
@@ -43,6 +46,11 @@ function radixSort(nums) {
 radixSort([23, 345, 5467, 12, 2345, 9852])
 
 
+// n - length of array 
+// k - number of digits   
+
+//1. all unique randomly distributed data time complexity( average) = O(nk) will becomes O( n log n) due to the way computers store data
+// 2. In theory radix sorts seems to be faster than all other previous sorting algorithms but is not fully proven as there is counter arguments
 
 
 
