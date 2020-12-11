@@ -32,3 +32,59 @@ let sumReduce = numbers.reduce((acc, number) =>{
 console.log(sumReduce);
 
 
+//fizz buzz
+// function fizzbuzz() {
+//     for (let n = 0; n < 20; n++) {
+//       if (n % 3 === 0 && n % 5 === 0) {
+//         console.log("FizzBuzz");
+//       } else if (n % 3 === 0) {
+//         console.log("Fizz");
+//       } else if (n % 5 === 0) {
+//         console.log("Buzz");
+//       } else {
+//         console.log(n);
+//       }
+//     }
+// }
+
+// fizzbuzz();
+
+// function min(x, y) {
+//   return Math.min(x, y);
+// }
+// console.log(min(20, 10));
+
+
+// let arrays = [[1, 2, 3], [4, 5], [6]];
+
+// console.log(arrays.reduce((flat, current) => flat.concat(current), []));
+
+
+let data = [[1, 2, 3], [4, 5], [6]];
+
+function flatten(arr) {
+  let flatArray = [];
+
+  arr.forEach(element => {
+    if (Array.isArray(element)) {
+      flatArray = flatArray.concat(flatten(element))
+    }
+    else{
+      flatArray.push(element)
+    }
+  });
+  return flatArray 
+}
+
+const newArray = flatten(data)
+
+console.log(newArray);
+
+//es6 improve version for flatten array
+
+const matrix = [ [2,3,4], [6,7,8]]
+
+const flatArrayEs6 = matrix.flat(1);
+
+console.log(flatArrayEs6);
+

@@ -16,5 +16,7 @@
 
 ### Hash functions have plenty of implications in security and cryptography in the real world
 
+### Even with a a great hash function collisions are inevitable. However, there are many solution when dealing with collisions ex: Separate chaining, and linear probing 
+
 
 
