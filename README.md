@@ -86,5 +86,18 @@
 # It exploits the fact that information about the size of a number is encoded in the number of digits. More digits means a bigger number.
 ![radix](https://user-images.githubusercontent.com/39811614/79520164-03d9ba00-8024-11ea-883b-b237f2a0988a.png)
 
+## binary search is similar to binary heap the difference is that for binary search the value of the node or vertex does not matter incontrast to binary heap
+## Binary heaps is important because is use for building priority queue
+
+## Graph are used to connect verted or nodes through edges. This is used in real like in social media, netflix and other like suggesting a movie that is similar to the recently seen. 
+
+## Dijkstra's Algorithms - it acts upon a  weighted graph - its used in alot of times in tech companoies, in some cases tech companies build their secrect algorithms on top od Dijkstra- What is it? It finds the shortest path between two vertices on a graph.
 
 # <Credits>  This is my review and notes in algorithms that I learn from taking JavaScript Algorithms and Data structure course from instructor Colt Steel.  The main purpose of this review is to help me learn, understand, implement, and review Algortims and Data Structure. This is not meant to be used for commercial purposes. 
+
+# Dynamic Programming -a method for solving a complex problem by breaking it down into a collection of simpler subproblems, solving each of those just once, and storing their solutions
+### requires a knowledge in recursion, objective is to used solve overlapping subproblems
+
+### So in order for us to use dynamic dynamic programming on a given problem there have to be subproblems that overlap in some way.
+
+### Subproblems means that we can break one problem down into smaller pieces but some of those pieces are re-used again. So a problem is said to have optimal substructure if the optimal solution for a bigger problem can be constructed from the optimal solutions for its subproblems. some solutions is using memoization and Tabulation, storing the result of a previous result in a " table" usually an array. Better space complexity can be achieved using tabulation.
