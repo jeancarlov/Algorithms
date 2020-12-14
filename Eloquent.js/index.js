@@ -97,6 +97,42 @@ function power(x,y) {
 }
 
 let result =power(2,0) // 1
-console.log(result);
+// console.log(result);
 power(2,2) // 4
 power(2,4) // 16
+
+
+
+function detectWord(str) {
+ 
+  let arr= str.split('')
+  let filtered = arr.filter((val) => {
+    return val.length === 1 && val.match(/[a-z]/)
+  })
+  // console.log(filtered);
+  let newArr= filtered.join('')
+  // console.log(newArr);
+  return newArr;
+ 
+  
+
+}
+;
+let result1=detectWord("bEEFGBuFBRrHgUHlNFYaYr"); 
+console.log(result1);
+
+
+//solution 2 with for loop
+function detectWord2(str) {
+  let wanted = "";
+  for (let letter of str) {
+    if (letter === letter.toLowerCase()) {
+      wanted = wanted + letter;
+    }
+  }
+  return wanted;
+}
+
+// solution 3 and best answer 
+
+const detectWord3 = (str) => str.replace(/[A-Z]/g, "");
