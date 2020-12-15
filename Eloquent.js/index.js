@@ -119,7 +119,7 @@ function detectWord(str) {
 }
 ;
 let result1=detectWord("bEEFGBuFBRrHgUHlNFYaYr"); 
-console.log(result1);
+// console.log(result1);
 
 
 //solution 2 with for loop
@@ -136,3 +136,143 @@ function detectWord2(str) {
 // solution 3 and best answer 
 
 const detectWord3 = (str) => str.replace(/[A-Z]/g, "");
+
+// -----------------------
+// function tuckIn(arr1, arr2) {
+
+//   newCombination = [...arr1,...arr2]
+//   return newCombination;
+  
+// }
+
+// let newFun = (a, b) => b - a;
+// tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]).sort(newFun);
+// console.log(newFun);
+
+// let result2 = tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]);
+// console.log(result2);
+
+function tuckInCrazyMix(arr1, arr2) {
+newCombination = [...arr1,...arr2]
+    for (let i = 0; i < newCombination.length; i++) {
+       for (let j = 0; j < newCombination.length; j++) {
+           if (newCombination[j] > newCombination[j+1]) {
+               //Swap
+               let tmp = newCombination[i];
+               newCombination[j] = newCombination[j + 1];
+               newCombination[j + 1] = tmp;
+           }
+       }    
+    }
+    return newCombination
+}
+
+
+ 
+
+function tuckIn(arr1, arr2) {
+  return [arr1[0], ...arr2, arr1[1]]; 
+}
+let result2 = tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]);
+// console.log(result2); // [ 1, 2, 3, 4,  5,  6, 7, 8, 9, 10]
+
+// another solution 2
+const tuckIn2 = ([a, c], b) => [a, ...b, c];
+
+// another solution 3
+function tuckIn3(arr1, arr2) {
+  arr2.push(arr1[1]);
+  arr2.unshift(arr1[0]);
+  return arr2;
+}
+
+// Getting date and testing true or false 
+// function timeForMilkAndCookies(date) {
+//  let day = date.getDate();
+//  let month = date.getMonth();
+//  console.log(day);
+//  console.log(month);
+//  if (day === 24 && month === 11) {
+//    return true
+//  }else{
+//    return false
+//  }
+
+// }
+
+// let result3= timeForMilkAndCookies(new Date(2013, 11, 24));
+// console.log(result3);
+
+
+// Create a function that will take a HEX number and returns the binary equivalent (as a string).
+
+// function toBinary(num) {
+//   return num.toString(2);
+// }
+
+// let result4= toBinary(0xff);
+// console.log(result4);
+
+
+
+function charCount(myChar, str) { 
+   let count = 0;
+   for (let i = 0; i < str.length; i++) {
+     const element = str[i];
+     if (str.charAt(i) == myChar) {
+       count += 1;
+     }
+     
+   }
+   return count
+}
+
+let result5= charCount("c", "Chamber of secrets");
+// let result5= charCount("a", "edabit");
+console.log(result5);
+
+function charCountFilter(myChar, str) {
+  return [...str].filter((x) => x === myChar).length;
+}
+
+
+ charCountSplit = (char, str) => str.split(char).length - 1;
+
+
+ function charCountRegex(myChar, str) {
+   return (str.match(new RegExp(myChar, "g")) || []).length;
+ }
+
+ function charCountSplitFilter(myChar, str) {
+   return str.split("").filter((char) => char === myChar).length;
+ }
+
+
+
+ function footballPoints(wins, draws, losses) {
+   let winPoints = 3 * wins;
+   let drawPoints = 1 * draws;
+   let total = winPoints + drawPoints;
+   return total;
+ }
+
+ let result6= footballPoints(3, 4, 2);
+ console.log(result6);
+
+ const footballPointsEs6 = (a, b, c) => a * 3 + b;
+
+function divisibleByFive(n) {
+ if (n % 5 === 0) {
+    return true;
+ } else{
+   return false;
+ }
+}
+
+let result7=divisibleByFive(56);
+console.log(result7);// false
+
+
+const areaEs6 = (h, w) => (h > 0 && w > 0 ? h * w : -1);
+let result8 = area(3, 4);
+console.log(result8);
