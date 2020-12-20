@@ -229,7 +229,7 @@ function charCount(myChar, str) {
 
 let result5= charCount("c", "Chamber of secrets");
 // let result5= charCount("a", "edabit");
-console.log(result5);
+
 
 function charCountFilter(myChar, str) {
   return [...str].filter((x) => x === myChar).length;
@@ -257,7 +257,7 @@ function charCountFilter(myChar, str) {
  }
 
  let result6= footballPoints(3, 4, 2);
- console.log(result6);
+
 
  const footballPointsEs6 = (a, b, c) => a * 3 + b;
 
@@ -274,5 +274,118 @@ console.log(result7);// false
 
 
 const areaEs6 = (h, w) => (h > 0 && w > 0 ? h * w : -1);
-let result8 = area(3, 4);
-console.log(result8);
+
+function convert(minutes) {
+  return minutes *60 
+}
+convert(5);
+
+
+function isTrue(relation) {
+return eval(relation.replace("=", "==="));
+}
+
+const isTrueEs6 = (relation) => eval(relation.replace("=", "==="));
+
+
+function largestSwap(num) {
+  let numberA = num.toString().charAt(0).split("");
+  let numberB = num.toString().charAt(1).split("");
+  // console.log(numberB);
+  return numberA >= numberB
+   
+}
+
+let result9 =largestSwap(27);// correct 
+
+
+
+const largestSwap1 = (num) =>
+  Number(num.toString().split("").reverse().join("")) <= num;
+
+  // let result10 = largestSwap(27);
+  // console.log(result10);
+
+  function largestSwap3(num) {
+    return Number(num.toString()[0]) >= Number(num.toString()[1]);
+  }
+
+
+  function largestSwap4(num) {
+    return num / 10 > num % 10;
+  }
+
+function isFirstSuperior(arr1, arr2) {
+ return arr1 > arr2
+}
+
+let result11=isFirstSuperior([1, 2, 3, 4], [1, 2, 4, 4])// false
+
+
+// write an erro function without using switch or if statments
+function error(n) {
+	let obj = {
+	1 : "Check the fan: e1",
+	2 : "Emergency stop: e2",
+	3 : "Pump Error: e3",
+	4 : "c: e4",
+	5 : "Temperature Sensor Error: e5"
+  };
+  return obj[n] || 101;
+
+}
+
+let result12 = error(1);
+
+
+// Check if a string is a title string or not. A title string is one which has all the words in the string start with a upper case letter.
+
+
+// long solution
+
+function checkTitleLongSolution(title) {
+  var splitArray = title.split(" ");
+  var arr = [];
+  for (var i in splitArray) {
+    arr.push(splitArray[i][0]);
+  }
+  var string = arr.join("");
+  var result = true;
+  for (var j in string) {
+    if (string[j] !== string[j].toUpperCase()) {
+      result = false;
+    }
+  }
+  return result;
+}
+
+function checkTitleBetter(t) {
+  let f = t.split(" ").map((e) => (e[0] == e[0].toUpperCase() ? true : false));
+  return !f.includes(false);
+}
+
+function checkTitleBetter2(title) {
+  return !title
+    .split(" ")
+    .map((x) => x[0] == x[0].toUpperCase())
+    .includes(false);
+}
+
+let checkTitle = (t) => t
+    .match(/\b\w/g)
+    .map((a) => a == a.toUpperCase())
+    .pop();
+
+let result21 = checkTitle("A Mind Boggling Achievement");
+
+
+// working with promises 
+
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Hello");
+  }, 1000);
+});
+
+let promise = new Promise((resolve) => setTimeout(() => resolve("hello"), 1));
+
