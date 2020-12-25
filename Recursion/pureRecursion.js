@@ -1,8 +1,9 @@
 function collectOddVal(arr) {
     let newArr  = []; 
 
-    if (arr.length === 0){ // it checks if array is empty but is not until odd values are taken ou
-        return newArr; // base
+    if (arr.length === 0) {
+      // it checks if array is empty but is not until odd values are taken ou
+      return newArr; // base
     }
     if(arr[0] % 2 !== 0){
         newArr.push(arr[0]); // it pushes the odd number to data container
