@@ -25,11 +25,11 @@
 
 // console.log(sum);
 // Improve version with reduce method
-// const numbers = [1, 2, 3, 4, 6];
-// let sumReduce = numbers.reduce((acc, number) =>{
-//     return acc + number;
-// },20);
-// console.log(sumReduce);
+const numbers = [1, 2, 3, 4, 6];
+let sumReduce = numbers.reduce((acc, number) =>{
+    return acc + number;
+},20);
+console.log(sumReduce);
 
 //--------------------------------------
 //fizz buzz
@@ -381,11 +381,11 @@ let result21 = checkTitle("A Mind Boggling Achievement");
 
 // working with promises 
 
-let promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Hello");
-  }, 1000);
-});
+// let promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Hello");
+//   }, 1000);
+// });
 
-let promise = new Promise((resolve) => setTimeout(() => resolve("hello"), 1));
+// let promise = new Promise((resolve) => setTimeout(() => resolve("hello"), 1));
 

@@ -104,14 +104,13 @@ let result06 = "Hello!... Wait. How goes?..... GoodBye!..".match(REGEXP);
 function doubleChar(str) {
  let originalStr = str.split('')
  let repeatStr = str.repeat(2).split("");
-//  let mapped = originalStr.map()
- console.log(repeatStr);
-//  console.log(originalStr);
- if (repeatStr === repeatStr ) {
-     let newStr = 
- }
- return originalStr
 }
+ let mapped = originalStr.map()
+ console.log(repeatStr);
+ console.log(originalStr);
+ 
 
-let result07 = doubleChar("String");
-console.log(result07);
+
+const differenceWith = (arrVal, othVal, comp) => {
+  return arrVal.filter((x) => othVal.every((y) => !comp(x, y)));
+}
