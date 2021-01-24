@@ -335,8 +335,55 @@ function error(n) {
 
 }
 
-let result12 = error(1);
+let result12 = error(7);
+console.log(result12);
 
+
+function generation(n,y) {
+
+ let obj1 = {
+   "-3": "great grandmother",
+   "-2": "grandmother",
+   "-1": "mother",
+   "0": "me!",
+   "1": "daughter",
+   "2": "granddaughter",
+   "3": "great granddaughter",
+ }
+let obj2 = {
+  "-3": "great grandfather",
+  "-2": "grandfather",
+  "-1": "father",
+  "0": "me!",
+  "1": "son",
+  "2": "grandson",
+  "3": "great grandson",
+};
+// return "f" === y || "m" === y ? obj1[n] : obj2[n];
+
+  if ("f" === y) {
+    return obj1[n];
+  } if ("m" === y) {
+    return obj2[n]
+  }
+
+}
+let result13 = generation(1,"m");
+console.log(result13);
+console.log("test");
+
+// function generation2(x, y) {
+//   const elo = {
+//     "-3": { m: "great grandfather", f: "great grandmother" },
+//     "-2": { m: "grandfather", f: "grandmother" },
+//     "-1": { m: "father", f: "mother" },
+//     0: { m: "me!", f: "me!" },
+//     1: { m: "son", f: "daughter" },
+//     2: { m: "grandson", f: "granddaughter" },
+//     3: { m: "great grandson", f: "great granddaughter" },
+//   };
+//   return elo[x][y];
+// }
 
 // Check if a string is a title string or not. A title string is one which has all the words in the string start with a upper case letter.
 
