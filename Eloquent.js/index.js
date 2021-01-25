@@ -436,3 +436,212 @@ let result21 = checkTitle("A Mind Boggling Achievement");
 
 // let promise = new Promise((resolve) => setTimeout(() => resolve("hello"), 1));
 
+const fixImport = (s) => {
+  let [a, b, c, d] = s.split(" ");
+  return `${c} ${d} ${a} ${b}`;
+};
+
+let result17 = fixImport("import object from module_name") // "from module_name import object"
+
+function fixImport2(s) {
+	let fp = s.slice(s.indexOf("from"));
+	let sp = s.slice( 0,s.indexOf(" from"));
+  return  `${fp} ${sp}`;}
+  
+
+  // function sumOfCubes(num) {
+  //   if(num === [] ? 0 : 1);
+  //   let totalPow = num.map( x => Math.pow(x,3));
+  //   console.log(totalPow);
+  //   let sumAll = totalPow.reduce(
+  //     (accumulator, current) => accumulator + current
+  //   );
+  //   console.log(sumAll);
+  //   return sumAll
+  // }
+
+  // let result19 = sumOfCubes([1, 5, 9]);
+
+  // console.log(result19);
+
+  function sumOfCubes(num) {
+    if (num === []) {
+      return 0;
+    }
+    let totalPow = num
+      .map((x) => Math.pow(x, 3))
+      .reduce((accumulator, current) => accumulator + current,0);
+    console.log(totalPow);
+
+    return totalPow;
+  }
+  let result19 = sumOfCubes([2]);
+  console.log(result19);
+
+  // const sumOfCubes = (nums) => nums.map((x) => x * x * x).reduce((a, c) => a + c, 0);
+
+  
+  
+  function getOnlyEvens(nums) {
+    return nums.filter((item, index) => !(item % 2) && !(index % 2));
+  }
+
+  // const getOnlyEvens2 = (nums) =>
+  //   nums.filter((n, i) => n % 2 === 0 && i % 2 === 0);
+
+  // function getOnlyEvens3(nums) {
+  //   let arr = [];
+  //   for (var i = 0; i <= nums.length; i += 2)
+  //     if (nums[i] % 2 == 0) arr.push(nums[i]);
+  //   return arr;
+  // }
+
+  let result20 = getOnlyEvens([1, 3, 2, 6, 4, 8]);
+  console.log(result20);
+
+
+  let s = "It was  a dark and stormy night.";
+  // let words = s.split(/\W+/).filter(word => word.length >=4) // [ 'dark', 'stormy', 'night' ]
+  let words = s.split(/\W+/).filter(word => !word.length) // [ '' ]
+  console.log(words);
+  // split(/\W+/)  is a regex expression that split a-z or 0-9
+
+ // const sumOfCubes = (nums) => nums.map((x) => x * x * x).reduce((a, c) => a + c, 0);
+
+function getAverage(arr) {
+
+  let total = 0;
+  for (var i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  let avg = total / arr.length;
+  console.log(avg);
+
+  return avg;
+
+}
+
+  let result22 = getAverage([1, 3]);
+
+// let vals = [2,4,5,6,7,8]
+
+// let newArrVals = vals.map( x => x *2)
+// console.log(newArrVals);
+
+function isAvgWhole(arr) {
+  return Number.isInteger(arr.reduce((accum, val) => accum + val) / arr.length);
+}
+
+let result23 =isAvgWhole([1, 2, 3, 4]); 
+console.log(result23);
+
+//Create a function that takes a string of name and checks how much good is the given name. 
+// A preloaded dictionary of alphabet scores is available in the Code tab. 
+//Add up the letters of your name to get the total score
+
+const scores = {
+  A: 100,
+  B: 14,
+  C: 9,
+  D: 28,
+  E: 145,
+  F: 12,
+  G: 3,
+  H: 10,
+  I: 200,
+  J: 100,
+  K: 114,
+  L: 100,
+  M: 25,
+  N: 450,
+  O: 80,
+  P: 2,
+  Q: 12,
+  R: 400,
+  S: 113,
+  T: 405,
+  U: 11,
+  V: 10,
+  W: 10,
+  X: 3,
+  Y: 210,
+  Z: 23,
+};
+
+const nameScore = (name) => {
+  const score = [...name].reduce((a, b) => a + scores[b] || 0, 0);
+  if (score >= 600) return "THE BEST";
+  else if (score >= 301) return "VERY GOOD";
+  else if (score >= 61) return "PRETTY GOOD";
+  else return "NOT TOO GOOD";
+};
+
+
+// Recursive fn 
+
+function repetition(txt, n) {
+   if (n > 0) return txt.repeat(n);
+   else return "";
+}
+
+let result24 = repetition("ab", 3);
+console.log(result24);
+
+
+// short array by length
+
+function sortByLength(arr) {
+let newSortItems = arr.sort((a, b) => a.length - b.length);
+return newSortItems;
+}
+
+let resultSort = sortByLength(["Google", "Apple", "Microsoft"]);
+console.log(resultSort);
+
+
+// const sortByLengthES6 = (arr) => arr.sort((a, b) => a.length - b.length);
+
+// function sortByLengthOldandSlowSolution(array) {
+//   for (var i = 0; i < array.length; i++) {
+//     for (var j = 0; j < array.length - i - 1; j++) {
+//       var temp = array[j];
+//       if (array[j].length > array[j + 1].length) {
+//         array[j] = array[j + 1];
+//         array[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return array;
+// }
+
+
+// Formats a number using fixed-point notation. toFixed()
+//Parses a string argument and returns a floating point number. 
+function myPi(n) {
+  return Number(Math.PI.toFixed(n));
+}
+
+
+// const myPi2 = (n) => +Math.PI.toFixed(n);
+// function myPi3(n) {
+//   return parseFloat(Math.PI.toFixed(n));
+// }
+
+
+function highestDigit(number) {
+  let nums = number.toString().split("")
+
+  let mappedNum = Math.max.apply(null, nums);
+  
+  return mappedNum;
+
+}
+
+let resultHigestDigit = highestDigit(379);
+// console.log(resultHigestDigit);
+
+
+// function highestDigit2(number) {
+//   let a = number.toString().split("");
+//   return Math.max(...a);
+// }
